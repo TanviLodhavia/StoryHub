@@ -1,16 +1,15 @@
 import firebase from 'firebase';
-require ('@firebase/firestore')
+require('@firebase/firestore')
 
-  var firebaseConfig = {
-    apiKey: "AIzaSyADjyd5GnBCTrm2vixcxz2PBow4p16_FTI",
-    authDomain: "story-hub-d173f.firebaseapp.com",
-    databaseURL: "https://story-hub-d173f-default-rtdb.firebaseio.com",
-    projectId: "story-hub-d173f",
-    storageBucket: "story-hub-d173f.appspot.com",
-    messagingSenderId: "252061605103",
-    appId: "1:252061605103:web:781b457fd5d241fbcc8f1a"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+var firebaseConfig = {
+  apiKey: "AIzaSyDubqUcWnKie74Mt4pfwvq6FUCBCZmkOcM",
+  authDomain: "storyhub-d7fa8.firebaseapp.com",
+  projectId: "storyhub-d7fa8",
+  storageBucket: "storyhub-d7fa8.appspot.com",
+  messagingSenderId: "398100680722",
+  appId: "1:398100680722:web:03da39e68d654c856188cb"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 export default firebase.firestore();

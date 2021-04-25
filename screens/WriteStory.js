@@ -13,13 +13,12 @@ export default class Write extends React.Component{
         }
     }
 
-    submitStory=async()=>{
+    submitStory=()=>{
       var story;
-      story=db.ref('Story1/');
-      story.update({
-        Title:{title},
-        Author:{author},
-        Story:{story}
+      db.collection('STORIES').add({
+        'title':this.state.title,
+        'author':this.state.author,
+        'story':this.state.story,
       })
     }
 
@@ -62,7 +61,7 @@ export default class Write extends React.Component{
                 <TouchableOpacity 
                 onPress={this.submitStory}
                 style={styles.submitButton}>
-                  <Text>SUBMIT</Text>
+                  <Text style={{alignSelf:'center'}} >SUBMIT</Text>
                 </TouchableOpacity>
 
             </View>
