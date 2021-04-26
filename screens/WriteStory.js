@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, ToastAndroid } from 'react-native';
 import db from '../config';
 import firebase from 'firebase';
 
@@ -20,13 +20,20 @@ export default class Write extends React.Component{
         'author':this.state.author,
         'story':this.state.story,
       })
+      ToastAndroid.show('Book Donated!')
+      this.setState({
+        title:'',
+        author:'',
+        story:''
+      })
     }
 
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.header}>Story Hub</Text>
 
+              <KeyboardAvoidingView>
+                <Text style={styles.header}>Story Hub</Text>
 
                 <TextInput style={styles.inputBox} 
             placeholder= 'Story Title'
@@ -64,6 +71,7 @@ export default class Write extends React.Component{
                   <Text style={{alignSelf:'center'}} >SUBMIT</Text>
                 </TouchableOpacity>
 
+                </KeyboardAvoidingView>
             </View>
         )
     }
