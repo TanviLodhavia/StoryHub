@@ -20,7 +20,7 @@ export default class Write extends React.Component{
         'author':this.state.author,
         'story':this.state.story,
       })
-      ToastAndroid.show('Book Donated!')
+      ToastAndroid.show('Book Donated!', ToastAndroid.SHORT)
       this.setState({
         title:'',
         author:'',
@@ -105,7 +105,8 @@ const styles = StyleSheet.create({
         width: 100, 
         height: 25,
         alignItems: 'center',
-        marginTop:70
+        marginTop:70,
+        alignSelf: 'center'
     }, 
     header: {
         backgroundColor: "pink",
